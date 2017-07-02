@@ -1,11 +1,18 @@
-#include "point.h"
+#include "a.h"
 
 int main()
 {
-   Point * pt1 = new Point2D( 1, 2 );
-   Point * pt2 = new Point3D( 1, 2, 3 );
-   pt1->Print();
-   pt2->Print();
-   return 0;
+  A a(4), b;
+  for( int i = 0; i < 4; i ++ )
+    a[i] = i + 1;
+  std::cout << "Before object assignment:" << std::endl;
+  for( int i = 0; i < 4; i ++ )
+    std::cout << a[ i ] << " ";
+  std::cout << std::endl;
+  b = a;
+  std::cout << "After object assignment:" << std::endl;
+  for( int i = 0; i < 4; i++ )
+    std::cout << b[ i ] << " ";
+  std::cout << std::endl;
+  return 0;
 }
-
